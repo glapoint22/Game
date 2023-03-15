@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2136d0079fa3b24fbdc98a3b2888d15, type: 3}
+  m_Name: String
+  m_EditorClassIdentifier: 
+  itemName: String
+  description: This is a string
+  prefab: {fileID: 8064826233655843011, guid: 0de58f8f93b543e47855fc41aaf40f21, type: 3}
+  sprite: {fileID: 21300000, guid: 84f05561514718c4ba56864c1729ecf6, type: 3}
+  maxItemCount: 10
+  isStackable: 1

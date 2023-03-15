@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2136d0079fa3b24fbdc98a3b2888d15, type: 3}
+  m_Name: Twig
+  m_EditorClassIdentifier: 
+  itemName: Twig
+  description: Twig from a tree
+  prefab: {fileID: 2699061541521716433, guid: d228c3eb771f53f44ae860e6a68d7f7d, type: 3}
+  sprite: {fileID: 21300000, guid: 8dfeaa85bef0000409a152503bcf4ff0, type: 3}
+  maxItemCount: 4
+  isStackable: 1

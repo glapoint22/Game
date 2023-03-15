@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2136d0079fa3b24fbdc98a3b2888d15, type: 3}
+  m_Name: Knife
+  m_EditorClassIdentifier: 
+  itemName: Knife
+  description: This is a knife
+  prefab: {fileID: 1415082215344987885, guid: a04071273102ea24ab6c06156e0da569, type: 3}
+  sprite: {fileID: 21300000, guid: c7b9ec8a683683441a72b1cb99c2c2be, type: 3}
+  maxItemCount: 0
+  isStackable: 0
+  cursor: {fileID: 2800000, guid: 50acca6912c1ee8469498dbce40dcf82, type: 3}

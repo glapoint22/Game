@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce2c530779915a4e82d2042ccada177, type: 3}
+  m_Name: KnifeBlueprint
+  m_EditorClassIdentifier: 
+  materials:
+  - item: {fileID: 11400000, guid: 0329749f1586e844193000d0591b06c8, type: 2}
+    itemCount: 2
+  - item: {fileID: 11400000, guid: 4bb93690aa6b54d45b0a0d64d64696f4, type: 2}
+    itemCount: 3
+  item: {fileID: 11400000, guid: ed1fe4b8d99959148bb8b283e35a79c5, type: 2}
