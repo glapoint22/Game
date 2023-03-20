@@ -175,7 +175,7 @@ public sealed class Crafting : MonoBehaviour
         Item item = currentBlueprint.Item;
 
         itemImage.sprite = item.Sprite;
-        itemNameText.text = item.ItemName;
+        itemNameText.text = item.Name;
     }
 
 

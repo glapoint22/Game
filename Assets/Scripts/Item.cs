@@ -1,10 +1,10 @@
 using UnityEngine;
 
 [CreateAssetMenu()]
-public sealed class Item : ScriptableObject
+public class Item : ScriptableObject
 {
-    [SerializeField] private string itemName;
-    public string ItemName { get { return itemName; } }
+    [SerializeField] private new string name;
+    public string Name { get { return name; } }
 
 
     [SerializeField] private string description;
@@ -17,14 +17,7 @@ public sealed class Item : ScriptableObject
 
     [SerializeField] private Sprite sprite;
     public Sprite Sprite { get { return sprite; } }
-
-
-    [SerializeField] private int maxItemCount;
-    public int MaxItemCount { get { return maxItemCount; } }
-
-
-    [SerializeField] private bool isStackable;
-    public bool IsStackable { get { return isStackable; } }
+    
 
     [SerializeField] private Texture2D cursor;
     public Texture2D Cursor { get { return cursor;} }

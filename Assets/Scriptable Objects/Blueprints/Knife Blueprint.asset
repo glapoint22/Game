@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ce2c530779915a4e82d2042ccada177, type: 3}
-  m_Name: BowBlueprint
+  m_Name: Knife Blueprint
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fb66745abdf8b3e429170c316a68de4a, type: 2}
+  item: {fileID: 11400000, guid: ed1fe4b8d99959148bb8b283e35a79c5, type: 2}
   materials:
-  - item: {fileID: 11400000, guid: 0520757da191cfd40a195ae10f73ec86, type: 2}
-    itemCount: 1
-  - item: {fileID: 11400000, guid: 0680c9397cc3b3b46acede7c22973ecf, type: 2}
+  - item: {fileID: 11400000, guid: 0329749f1586e844193000d0591b06c8, type: 2}
     itemCount: 2
-  - item: {fileID: 11400000, guid: aa1ff87c9c1f9a445beecd5df5c203f0, type: 2}
+  - item: {fileID: 11400000, guid: 4bb93690aa6b54d45b0a0d64d64696f4, type: 2}
     itemCount: 1

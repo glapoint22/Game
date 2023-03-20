@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6c4e38923b5d842bbf65ab826808d9, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: 
+  name: Bow
+  description: This is a bow
+  prefab: {fileID: 8165030957670578259, guid: 9f969e2b208b7014497e0ce86550ebfb, type: 3}
+  sprite: {fileID: 21300000, guid: 7f6953562304dbd4db57e859810fa461, type: 3}
+  cursor: {fileID: 2800000, guid: 491c0f2c9a59f0349a30f1c58e2520f5, type: 3}
+  durability: 10
+  damage: 20
+  criticalStrike: 2
+  criticalStrikeDamage: 3
+  range: 30
