@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Equipment : MonoBehaviour
@@ -10,7 +9,7 @@ public class Equipment : MonoBehaviour
     private readonly List<Item> snapshot = new();
     public static Equipment Instance;
 
-    public event EventHandler<OnEquipmentChangeEventArgs> OnEquipmentChange;
+    public event EventHandler OnEquipmentChange;
 
 
     // -------------------------------------------------------------------------------- Awake -------------------------------------------------------------------------------
@@ -58,15 +57,7 @@ public class Equipment : MonoBehaviour
 
 
             // There is a difference
-            OnEquipmentChange?.Invoke(this, new OnEquipmentChangeEventArgs
-            {
-                attributes = slots[i].Item ? (slots[i].Item as EquipableItem).Attributes : (snapshot[i] as EquipableItem).Attributes
-                    .Select(x => new Attribute
-                    {
-                        attributeType = x.attributeType,
-                        value = -x.value
-                    }).ToArray()
-            });
+            OnEquipmentChange?.Invoke(this, new EventArgs());
             SetSnapshot();
             break;
         }

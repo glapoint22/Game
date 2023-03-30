@@ -3,23 +3,36 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
-    //[SerializeField] private TextMeshProUGUI healthValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI strengthValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI intelligenceValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI agilityValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI stealthValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI criticalStrikeValueTextMesh;
-    //[SerializeField] private TextMeshProUGUI criticalStrikeDamageValueTextMesh;
+    [SerializeField] private TextMeshProUGUI enduranceValueTextMesh;
+    [SerializeField] private TextMeshProUGUI powerValueTextMesh;
+    [SerializeField] private TextMeshProUGUI defenseValueTextMesh;
+    [SerializeField] private TextMeshProUGUI criticalStrikeValueTextMesh;
+    [SerializeField] private TextMeshProUGUI vitalityStrikeValueTextMesh;
 
 
 
-    //// -------------------------------------------------------------------------------- Start -------------------------------------------------------------------------------
-    //private void Start()
-    //{
-    //    Player.Instance.OnChange += Player_OnChange;
-    //}
 
-    //private void Player_OnChange(object sender, System.EventArgs e)
-    //{
-    //}
+    // -------------------------------------------------------------------------------- Start -------------------------------------------------------------------------------
+    private void Start()
+    {
+        Player.Instance.OnChange += Player_OnChange;
+        SetAttributes();
+    }
+
+    private void Player_OnChange(object sender, System.EventArgs e)
+    {
+        SetAttributes();
+    }
+
+
+
+
+    private void SetAttributes()
+    {
+        enduranceValueTextMesh.text = Player.Instance.Endurance.Value.ToString();
+        powerValueTextMesh.text = Player.Instance.Power.Value.ToString();
+        defenseValueTextMesh.text = Player.Instance.Defense.Value.ToString();
+        criticalStrikeValueTextMesh.text = Player.Instance.CriticalStrike.Value.ToString();
+        vitalityStrikeValueTextMesh.text = Player.Instance.Vitality.Value.ToString();
+    }
 }

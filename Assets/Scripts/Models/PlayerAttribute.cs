@@ -1,31 +1,36 @@
-using System;
 using UnityEngine;
 
-[Serializable]
-public class PlayerAttribute
+public abstract class PlayerAttribute
 {
     // Attribute Type
-    [SerializeField] private AttributeType attributeType;
+    protected AttributeType attributeType;
     public AttributeType AttributeType { get { return attributeType; } }
 
 
     // Description
     [SerializeField] private string description;
-    public string Description { get { return description; } }
 
 
 
     // Base Value
     [SerializeField] private int baseValue;
 
+
+    private PlayerStat playerStat;
+
     // Value
     public int Value { get; private set; }
 
 
 
-    public void Initialize()
+
+
+
+
+    public void Initialize(PlayerStat playerStat)
     {
-        Value = baseValue;
+        ResetValue();
+        this.playerStat = playerStat;
     }
 
 
@@ -33,5 +38,12 @@ public class PlayerAttribute
     public void SetValue(int value)
     {
         Value += value;
+        playerStat.SetValue(Value);
+    }
+
+
+    public void ResetValue()
+    {
+        Value = baseValue;
     }
 }

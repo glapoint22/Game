@@ -18,5 +18,11 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: c7b9ec8a683683441a72b1cb99c2c2be, type: 3}
   cursor: {fileID: 2800000, guid: 50acca6912c1ee8469498dbce40dcf82, type: 3}
   durability: 5
-  attributes: []
+  attributes:
+  - attributeType: 1
+    value: 20
+  - attributeType: 3
+    value: 8
   damage: 2
+  damageOverTime: 0
+  time: 0
