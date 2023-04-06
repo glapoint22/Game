@@ -1,4 +1,4 @@
-public abstract class PlayerStat
+public abstract class CharacterStat
 {
     // Value
     protected float value;

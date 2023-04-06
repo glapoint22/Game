@@ -1,4 +1,4 @@
-public class CriticalStrikeChance : PlayerStat
+public class CriticalStrikeChance : CharacterStat
 {
     
     public override void SetValue(int playerAttributeValue)

@@ -15,14 +15,16 @@ public class PlayerUI : MonoBehaviour
     // -------------------------------------------------------------------------------- Start -------------------------------------------------------------------------------
     private void Start()
     {
-        Player.Instance.OnChange += Player_OnChange;
+        Player.Instance.OnAttributesChange += Player_OnAttributesChange;
         SetAttributes();
     }
 
-    private void Player_OnChange(object sender, System.EventArgs e)
+    private void Player_OnAttributesChange(object sender, System.EventArgs e)
     {
         SetAttributes();
     }
+
+    
 
 
 

@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public sealed class Cursor : MonoBehaviour
+public sealed class UICursor : MonoBehaviour
 {
     public Item Item { get; private set; }
     private int stackSize;
     private Slot currentSlot;
 
-    public static Cursor Instance { get; private set; }
+    public static UICursor Instance { get; private set; }
     public event EventHandler OnItemDropped;
 
 
@@ -103,7 +103,7 @@ public sealed class Cursor : MonoBehaviour
         UnityEngine.Cursor.SetCursor(item.Cursor, new Vector2(16, 16), CursorMode.Auto);
 
         // Enable the backdrop
-        UIBackdrop.instance.Enable();
+        UIBackdrop.Instance.Enable();
     }
 
 

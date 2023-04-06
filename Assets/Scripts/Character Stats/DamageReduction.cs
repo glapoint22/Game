@@ -1,4 +1,4 @@
-public class DamageReduction : PlayerStat
+public class DamageReduction : CharacterStat
 {
     public override void SetValue(int playerAttributeValue)
     {

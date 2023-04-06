@@ -38,7 +38,7 @@ public class EquipmentSlot : Slot
     // --------------------------------------------------------------------------- On Pointer Click -------------------------------------------------------------------------
     public override void OnPointerClick(PointerEventData eventData)
     {
-        if (Cursor.Instance.Item != null && Cursor.Instance.Item is not EquipableItem) return;
+        if (UICursor.Instance.Item != null && UICursor.Instance.Item is not EquipableItem) return;
 
         base.OnPointerClick(eventData);
     }

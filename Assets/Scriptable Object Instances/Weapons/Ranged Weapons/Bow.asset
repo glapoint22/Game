@@ -18,7 +18,8 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 7f6953562304dbd4db57e859810fa461, type: 3}
   cursor: {fileID: 2800000, guid: 491c0f2c9a59f0349a30f1c58e2520f5, type: 3}
   durability: 10
+  attributes: []
   damage: 20
-  criticalStrike: 2
-  criticalStrikeDamage: 3
+  damageOverTime: 0
+  time: 0
   range: 30

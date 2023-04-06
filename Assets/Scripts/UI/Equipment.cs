@@ -7,7 +7,7 @@ public class Equipment : MonoBehaviour
     [SerializeField] private EquipmentSlot[] slots;
     public EquipmentSlot[] Slots { get { return slots; } }
     private readonly List<Item> snapshot = new();
-    public static Equipment Instance;
+    public static Equipment Instance { get; private set; }
 
     public event EventHandler OnEquipmentChange;
 
@@ -31,7 +31,7 @@ public class Equipment : MonoBehaviour
     private void Start()
     {
         EquipmentSlot.OnEquipItemDropped += EquipmentSlot_OnEquipItemDropped;
-        Cursor.Instance.OnItemDropped += Cursor_OnItemDropped;
+        UICursor.Instance.OnItemDropped += Cursor_OnItemDropped;
 
         SetSnapshot();
     }
@@ -114,16 +114,16 @@ public class Equipment : MonoBehaviour
             snapshot.Add(slot.Item);
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     // ----------------------------------------------------------------------------- Get Weapon -----------------------------------------------------------------------------
     public Weapon GetWeapon()
     {

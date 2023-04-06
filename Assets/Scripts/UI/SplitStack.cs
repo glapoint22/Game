@@ -36,7 +36,7 @@ public sealed class SplitStack : MonoBehaviour
         slot = (InventorySlot)sender;
 
         // If the cursor slot does not have an item and the item to split is stackable
-        if (!Cursor.Instance.Item && slot.Item is StackableItem)
+        if (!UICursor.Instance.Item && slot.Item is StackableItem)
         {
             image.sprite = slot.Item.Sprite;
 
@@ -92,7 +92,7 @@ public sealed class SplitStack : MonoBehaviour
     // ------------------------------------------------------------------------- On Ok Button Click -------------------------------------------------------------------------
     public void OnOkButtonClick()
     {
-        Cursor.Instance.AddItem(slot.Item, (int)slider.value);
+        UICursor.Instance.AddItem(slot.Item, (int)slider.value);
 
         int remainder = (int)(slot.StackSize - slider.value);
 

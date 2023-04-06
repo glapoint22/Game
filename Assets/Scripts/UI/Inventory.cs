@@ -7,7 +7,7 @@ public sealed class Inventory : MonoBehaviour
     [SerializeField] private InventorySlot[] slots;
     private readonly List<Tuple<Item, int>> snapshot = new();
 
-    public static Inventory Instance;
+    public static Inventory Instance { get; private set; }
     public event EventHandler OnChange;
 
 
@@ -29,7 +29,7 @@ public sealed class Inventory : MonoBehaviour
     // -------------------------------------------------------------------------------- Start -------------------------------------------------------------------------------
     private void Start()
     {
-        Cursor.Instance.OnItemDropped += Cursor_OnItemDropped;
+        UICursor.Instance.OnItemDropped += Cursor_OnItemDropped;
     }
 
 

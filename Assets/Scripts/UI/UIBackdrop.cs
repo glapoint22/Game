@@ -7,13 +7,13 @@ public class UIBackdrop : MonoBehaviour, IDropHandler, IPointerClickHandler
     private Image image;
     private Slot currentSlot;
 
-    public static UIBackdrop instance;
+    public static UIBackdrop Instance { get; private set; }
 
     // -------------------------------------------------------------------------------- Awake -------------------------------------------------------------------------------
     private void Awake()
     {
         image = GetComponent<Image>();
-        instance = this;
+        Instance = this;
     }
 
 
@@ -31,46 +31,46 @@ public class UIBackdrop : MonoBehaviour, IDropHandler, IPointerClickHandler
         Slot.OnMouseEndDrag += Slot_OnMouseEndDrag;
         Slot.OnMouseClick += Slot_OnMouseClick;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     // ------------------------------------------------------------------------------- Enable -------------------------------------------------------------------------------
     public void Enable()
     {
         image.enabled = true;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     // ------------------------------------------------------------------------------ Disable -------------------------------------------------------------------------------
     private void Disable()
     {
         image.enabled = false;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     // ----------------------------------------------------------------------- Slot: On Mouse End Drag ----------------------------------------------------------------------
     private void Slot_OnMouseEndDrag(object sender, System.EventArgs e)
     {
@@ -107,12 +107,12 @@ public class UIBackdrop : MonoBehaviour, IDropHandler, IPointerClickHandler
     {
         Slot slot = (Slot)sender;
 
-        if (slot.Item != null && !Cursor.Instance.Item)
+        if (slot.Item != null && !UICursor.Instance.Item)
         {
             Enable();
             currentSlot = slot;
         }
-        else if (Cursor.Instance.Item)
+        else if (UICursor.Instance.Item)
         {
             Disable();
         }
@@ -131,7 +131,7 @@ public class UIBackdrop : MonoBehaviour, IDropHandler, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Disable();
-        Cursor.Instance.RemoveItem();
+        UICursor.Instance.RemoveItem();
 
         if (currentSlot != null)
         {

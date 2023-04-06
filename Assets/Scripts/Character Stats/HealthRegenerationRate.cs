@@ -1,4 +1,4 @@
-public class HealthRegenerationRate : PlayerStat
+public class HealthRegenerationRate : CharacterStat
 {
     public override void SetValue(int playerAttributeValue)
     {

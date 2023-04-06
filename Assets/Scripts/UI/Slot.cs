@@ -245,7 +245,7 @@ public abstract class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     // --------------------------------------------------------------------------- On Pointer Click -------------------------------------------------------------------------
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        if (!Item && !Cursor.Instance.Item) return;
+        if (!Item && !UICursor.Instance.Item) return;
 
         if (Item && Item is StackableItem && StackSize > 1)
         {
