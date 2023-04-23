@@ -4,5 +4,7 @@ public enum FactionType
     NewOrder,
     Mutants,
     Scientists,
-    Marauders
+    Marauders,
+    Greys,
+    Darks
 }

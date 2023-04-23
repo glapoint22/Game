@@ -3,10 +3,6 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class Item : ScriptableObject
 {
-    [SerializeField] private new string name;
-    public string Name { get { return name; } }
-
-
     [SerializeField] private string description;
     public string Description { get { return description; } }
 

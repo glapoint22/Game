@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Weapons/Weapon")]
 public class Weapon : EquipableItem
 {
     // Damage

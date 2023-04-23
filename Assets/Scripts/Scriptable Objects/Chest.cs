@@ -1,10 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Apparel/Chest")]
 public class Chest : EquipableItem
 {
     public Chest()
-	{
-		EquipType = EquipmentType.Chest;
-	}
+    {
+        EquipType = EquipmentType.Chest;
+    }
 }

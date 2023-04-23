@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Apparel/Head")]
 public class Head : EquipableItem
 {
     public Head()

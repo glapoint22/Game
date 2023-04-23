@@ -19,7 +19,7 @@ public class UIBlueprintMaterial : MonoBehaviour
         Material = material;
 
         itemImage.sprite = material.item.Sprite;
-        itemNameText.text = material.item.Name;
+        itemNameText.text = material.item.name;
 
         UpdateItemCount();
     }

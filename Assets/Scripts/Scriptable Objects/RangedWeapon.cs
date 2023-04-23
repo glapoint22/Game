@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "Weapons/Ranged Weapon")]
 public class RangedWeapon : Weapon
 {
     // Range
