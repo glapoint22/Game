@@ -6,36 +6,44 @@ using UnityEngine;
 [Serializable]
 public class Mission
 {
-    [SerializeField] private string missionName;
-    public string MissionName { get { return missionName; } }
+    [SerializeField] private string title;
+    public string Title { get { return title; } }
 
     public string id;
 
-    [SerializeField] private MissionObjective[] missionObjectives;
-    public MissionObjective[] MissionObjectives { get { return missionObjectives; } }
+    [SerializeField] private MissionObjective[] objectives;
+    public MissionObjective[] Objectives { get { return objectives; } }
 
-    // Chain
-    [SerializeField] private bool chain;
-    [SerializeField] private int missionIndex;
+    // Prerequisite
+    [SerializeField] private bool prerequisite;
+    public bool Prerequisite { get { return prerequisite; } }
+
+    // Prerequisite Mission Id
+    [SerializeField] private string prerequisiteMissionId;
+    public string PrerequisiteMissionId { get { return prerequisiteMissionId; } }
 
     // Timed
     [SerializeField] private bool timed;
     [SerializeField] private int timeInMinutes;
 
     // Short Description
-    [SerializeField][TextArea(5, 5)] private string shortDescription;
+    [SerializeField][TextArea(5, 5)] private string objectivesText;
+    public string ObjectivesText { get { return objectivesText; } }
 
     // Long Description
-    [SerializeField][TextArea(20, 20)] private string longDescription;
+    [SerializeField][TextArea(20, 20)] private string description;
+    public string Description { get { return description; } }
 
     // Mission Completed Text
     [SerializeField][TextArea(5, 5)] private string missionCompletedText;
 
     // Mission Giver
     [SerializeField] private NPC missionGiver;
+    public NPC MissionGiver { get { return missionGiver; } }
 
     // Mission Receiver
     [SerializeField] private NPC missionReceiver;
+    public NPC MissionReceiver { get { return missionReceiver; } }
 
     // Rewards
     [SerializeField] private Item[] rewards;
@@ -43,32 +51,16 @@ public class Mission
     // Reputations
     [SerializeField] private Reputation[] reputations;
 
-    // Active
-    private bool active = true;
-    public bool Active { get { return active; } }
+
+    public MissionStatus status;
+    public MissionStatus Status { get { return status; } }
 
 
-    public void SetKillObjective(NPC killedNPC)
+    public List<MissionObjective> GetKillObjectives(NPC killedNPC)
     {
-        string untagged = UnityEditorInternal.InternalEditorUtility.tags[0];
-
-        // This line of code is used to get a list of mission objectives based on the following criteria:
-        // 1. The mission objective type must be "Kill"
-        // 2. The objective must have at least one NPC with the same Id as the NPC that has been killed,
-        // AND either the NPC set in the objective must be tagged as "Untagged"
-        // OR
-        // the objective NPC must have the same tag as the NPC that has been killed.
-        List<MissionObjective> killObjectives = missionObjectives
-            .Where(missionObjective => missionObjective.MissionObjectiveType == MissionObjectiveType.Kill &&
-            (missionObjective.NPCs.Any(npcCollection => npcCollection.Tag == untagged && npcCollection.NPC.Id == killedNPC.Id) ||
-            missionObjective.NPCs
-                .Where(npcCollection => npcCollection.NPC.Id == killedNPC.Id)
-                .Select(npcCollection => npcCollection.Tag)
-                .ToList()
-                .Contains(killedNPC.tag)))
-            .ToList();
-
-        // Mark this NPC as kililed for each objective it was a part of
-        killObjectives.ForEach(killObjective => killObjective.AddKill(killedNPC));
+        return objectives
+           .Where(missionObjective => missionObjective.MissionObjectiveType == MissionObjectiveType.Kill && missionObjective.NPCs
+               .Any(z => z.NPC.Id == killedNPC.Id))
+           .ToList();
     }
 }

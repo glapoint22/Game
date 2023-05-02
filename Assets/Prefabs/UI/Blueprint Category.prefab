@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4396379711994659343}
   - component: {fileID: 4396379711994659340}
   m_Layer: 5
-  m_Name: Expand Text
+  m_Name: Expand Collapse Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 4396379713639013678}
   - component: {fileID: 4396379713639013679}
   m_Layer: 5
-  m_Name: Category Name
+  m_Name: Header Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

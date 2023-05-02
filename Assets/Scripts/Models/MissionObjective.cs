@@ -32,7 +32,7 @@ public class MissionObjective
     // NPCs to Escort
     [SerializeField] private NPC[] npcsToEscort;
 
-    public void AddKill(NPC npc)
+    public void UpdateKillObjective(NPC npc)
     {
         string untagged = UnityEditorInternal.InternalEditorUtility.tags[0];
 

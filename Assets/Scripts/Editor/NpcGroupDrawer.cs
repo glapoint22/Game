@@ -9,7 +9,7 @@ public class NpcGroupDrawer : PropertyDrawer
     // ------------------------------------------------------------------------------- On GUI -------------------------------------------------------------------------------
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        EditorGUI.BeginProperty(position, label, property);
+        //EditorGUI.BeginProperty(position, label, property);
 
         property.isExpanded = EditorGUI.Foldout(new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight), property.isExpanded, label);
 
@@ -53,7 +53,7 @@ public class NpcGroupDrawer : PropertyDrawer
 
 
 
-        EditorGUI.EndProperty();
+        //EditorGUI.EndProperty();
     }
 
 
